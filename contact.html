@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: url(background.jpg) no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #007bff;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            position: relative;
+            top: 0px;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+            max-width: 50px;
+            height: auto;
+        }
+
+        .navbar-toggler {
+            border-color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M0 5h30v2H0V5zm0 8h30v2H0v-2zm0 8h30v2H0v-2z" fill="%23fff"/></svg>');
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            color: #fff !important;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        /* Header */
+        .AYE {
+            color: white;
+            background-color: darkblue;
+            width: 100%;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: serif;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .abd {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: white;
+            display: inline;
+        }
+
+        /* Button Styling */
+        .btn-dark {
+            background-color: #343a40;
+            border-color: black: border: 2px solid white;
+
+        }
+
+        .btn-dark:hover {
+            background-color: #23272b;
+            border-color: #1d2124;
+        }
+
+        /* Centered Container Styling */
+        /* General Container Styling */
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            /* Center the container */
+        }
+
+
+        /* Headings */
+        h1,
+        h2 {
+            margin: 10px 0;
+            color: #0044cc;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Text Styles */
+        u {
+            text-decoration: underline;
+        }
+
+        i {
+            font-style: italic;
+        }
+
+        b {
+            font-weight: bold;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .contact-info,
+        .website,
+        .email {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .contact-info b,
+        .website b,
+        .email b {
+            color: #333;
+        }
+
+        /* Note and Thank You Section Styling */
+        /* General Styles */
+        .note,
+        .aq,
+        .ar {
+            background-color: white;
+            border: 2px solid red;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* .note Styling */
+        .note {
+            margin: 20px auto;
+            /* Reduced margin for smaller screens */
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            padding: 15px;
+            /* Increased padding for better readability */
+            width: 90%;
+            /* Width adjusted to fit smaller screens */
+            max-width: 600px;
+        }
+
+        /* .aq Styling */
+        .aq {
+            font-weight: bolder;
+            font-size: 1.2rem;
+            width: 90%;
+            /* Width adjusted to fit smaller screens */
+            max-width: 600px;
+            margin: 20px auto;
+            /* Centered with auto margins */
+            padding: 15px;
+            height: auto;
+        }
+
+        /* .ar Styling */
+        .ar {
+            font-weight: bolder;
+            font-size: 1.2rem;
+            width: 90%;
+            /* Width adjusted to fit smaller screens */
+            max-width: 600px;
+            margin: 20px auto;
+            /* Centered with auto margins */
+            padding: 15px;
+            height: auto;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .note {
+                font-size: 0.9rem;
+                /* Slightly smaller font size */
+                padding: 12px;
+                /* Slightly reduced padding */
+            }
+
+            .aq,
+            .ar {
+                font-size: 1rem;
+                /* Slightly smaller font size */
+                padding: 12px;
+                /* Slightly reduced padding */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .note {
+                font-size: 0.8rem;
+                /* Smaller font size for medium devices */
+                padding: 10px;
+                /* Reduced padding */
+            }
+
+            .aq,
+            .ar {
+                font-size: 0.9rem;
+                /* Smaller font size */
+                padding: 10px;
+                /* Reduced padding */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .note {
+                font-size: 0.8rem;
+                /* Maintain smaller font size */
+                padding: 8px;
+                /* Further reduced padding */
+            }
+
+            .aq,
+            .ar {
+                font-size: 0.8rem;
+                /* Smaller font size */
+                padding: 8px;
+                /* Further reduced padding */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .note {
+                font-size: 0.7rem;
+                /* Further reduced font size */
+                padding: 6px;
+                /* Further reduced padding */
+            }
+
+            .aq,
+            .ar {
+                font-size: 0.7rem;
+                /* Further reduced font size */
+                padding: 6px;
+                /* Further reduced padding */
+            }
+        }
+
+        @media (max-width: 300px) {
+            .note {
+                font-size: 0.6rem;
+                /* Smallest font size */
+                padding: 5px;
+                /* Minimum padding */
+            }
+
+            .aq,
+            .ar {
+                font-size: 0.6rem;
+                /* Smallest font size */
+                padding: 5px;
+                /* Minimum padding */
+            }
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: white;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            text-align: center;
+            /* Center content */
+        }
+
+        /* Social Icons Styling */
+        .footer .social-icons {
+            margin-bottom: 15px;
+        }
+
+        .footer .social-icons a {
+            color: #fff;
+            background-color: darkblue;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            /* Adjusted height */
+            text-align: center;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            /* Adjusted font size */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .footer .social-icons a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .ma {
+            color: #fff;
+            background-color: darkblue;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            /* Adjusted height */
+            text-align: center;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 24px;
+            /* Adjusted font size */
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .ma:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        /* Contact Info Styling */
+        .footer .contact-info {
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; Center the items */
+            margin-bottom: 15px;
+        }
+
+        .footer .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: green;
+        }
+
+        .footer .contact-info i {
+            font-size: 24px;
+            margin-left: 10px;
+            color: black;
+        }
+
+        .footer .contact-info h4 {
+            margin: 0;
+            color: #000;
+            font-size: 1rem;
+            /* Adjusted font size */
+        }
+
+        /* Footer Bottom Styling */
+        .footer-bottom {
+            background-color: black;
+            width: 370px;
+            /* Adjusted to full width */
+            height: 60px;
+            color: rgb(51, 145, 51);
+            padding: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .copy {
+            position: relative;
+            top: 8px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .footer {
+                padding: 15px;
+                /* Adjust padding for medium screens */
+            }
+
+            .footer .social-icons a {
+                width: 35px;
+                /* Adjust icon size */
+                height: 35px;
+                /* Adjust icon size */
+                font-size: 20px;
+                /* Adjust font size */
+            }
+
+            .footer .contact-info h4 {
+                font-size: 0.9rem;
+                /* Adjust font size */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .footer {
+                padding: 10px;
+                /* Reduce padding */
+            }
+
+            .footer .social-icons a {
+                width: 30px;
+                /* Adjust icon size */
+                height: 30px;
+                /* Adjust icon size */
+                font-size: 18px;
+                /* Adjust font size */
+            }
+
+            .footer .contact-info {
+                flex-direction: column;
+                /* Stack contact info vertically */
+                align-items: center;
+                /* Center the items */
+            }
+
+            .footer .contact-info h4 {
+                font-size: 0.8rem;
+                /* Adjust font size */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 10px;
+                /* Reduce padding */
+            }
+
+            .footer .social-icons a {
+                width: 25px;
+                /* Adjust icon size */
+                height: 25px;
+                /* Adjust icon size */
+                font-size: 16px;
+                /* Adjust font size */
+            }
+
+            .footer .contact-info {
+                padding: 5px;
+                /* Adjust padding */
+            }
+
+            .footer .contact-info h4 {
+                font-size: 0.7rem;
+                /* Adjust font size */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer {
+                padding: 5px;
+                /* Minimal padding for very small screens */
+            }
+
+            .footer .social-icons a {
+                width: 20px;
+                /* Adjust icon size */
+                height: 20px;
+                /* Adjust icon size */
+                font-size: 14px;
+                /* Adjust font size */
+            }
+
+            .footer .contact-info {
+                font-size: 0.9rem;
+                /* Reduce font size */
+            }
+        }
+
+        @media (max-width: 300px) {
+            .footer {
+                padding: 5px;
+                /* Maintain minimal padding */
+            }
+
+            .footer .social-icons a {
+                width: 20px;
+                /* Adjust icon size */
+                height: 20px;
+                /* Adjust icon size */
+                font-size: 12px;
+                /* Adjust font size */
+            }
+
+            .footer-bottom {
+                height: 30px;
+                /* Adjust height for very small screens */
+                padding: 2px;
+                /* Adjust padding */
+                font-size: 0.6rem;
+                /* Adjust font size */
+            }
+        }
+
+
+
+        /* .thank-you Container Styling */
+        .thank-you {
+            text-align: center;
+            /* Center the content */
+            margin: 20px auto;
+            /* Center container and add margin */
+            padding: 10px;
+            /* Add padding */
+            width: 100%;
+            /* Full width */
+            max-width: 600px;
+            /* Maximum width for larger screens */
+        }
+
+        /* Responsive Image Styling */
+        .thank-you img {
+            width: 100%;
+            /* Make the image responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+            max-width: 500px;
+            /* Maximum width to prevent the image from getting too large */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .thank-you {
+                padding: 5px;
+                /* Reduced padding for smaller screens */
+            }
+
+            .thank-you img {
+                max-width: 400px;
+                /* Adjust maximum width for smaller screens */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .thank-you {
+                padding: 5px;
+                /* Minimal padding for very small screens */
+            }
+
+            .thank-you img {
+                max-width: 300px;
+                /* Adjust maximum width for very small screens */
+            }
+        }
+
+        @media (max-width: 300px) {
+            .thank-you img {
+                max-width: 250px;
+                /* Adjust maximum width for the smallest screens */
+            }
+        }
+
+        .for {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btf {
+            background-color: #0044cc;
+
+        }
+
+        .for:hover {
+            color: black;
+        }
+
+        .con {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-light {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="AYE">
+        <center> Welcome to pakistan no 1 English Institute <h1 class="abd"> GLOBAL SPEAK </h1>
+        </center>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Pinyon Script (1).jpg" width="50px" height="50px"
+                    alt="Brand Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="english.lang.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="course.html.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="third.html">Online Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="kids.html">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button type="button" class="btn btn-dark"><a href="form.html" class="con"><i
+                                class="fas fa-phone-alt icon"></i>&nbsp;CONTACT US</a></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <center>
+            <div class="ar">
+                <h1 class="centered"><i>GLOBAL SPEAK</i></h1>
+            </div>
+        </center>
+        <div class="aq">
+            <h1 class="centered"><i>ENGLISH LANGUAGE INSTITUTE</i></h1>
+        </div>
+    </div>
+    <div class="yu">
+        <h2 class="yu"><u><i>CONTACT US:</i></u></h2>
+        <div class="contact-info">
+            <b>021-3452687018</b>
+        </div>
+        <h2 class="yu"><u><i>VISIT OUR WEBSITE:</i></u></h2>
+        <div class="website">
+            <b>www.globalspeak.com</b>
+        </div>
+        <h2 class="yu"><u><i>EMAIL US:</i></u></h2>
+        <div class="email">
+            <b>globalspeak@gmail.com</b>
+        </div>
+
+        <div class="note">
+            <h2><u><i>NOTE:</i></u></h2>
+            We look forward to helping you! So, please do not hesitate to contact us and feel free to ask if you have
+            any questions or need further information.
+        </div>
+        <center><button class="btn btf"><a href="form.html" class="for">For Admission</a></button></center>
+        <div class="thank-you">
+            <center><img src="thank..jpg" alt="thank you" width="500px" height="400px"></center>
+        </div>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.6272364510164!2d-0.12085072570816097!3d51.50332492739205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b2b20a3ac9f%3A0xa29bfb14f10fa1a0!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2suk!4v1629559950240!5m2!1sen!2suk"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    <div class="footer">
+        <center>
+            <!-- Existing social icons section -->
+            <div class="social-icons">
+                <h2 class="h2">Social Media</h2>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:info@globalspeak.com"><i class="far fa-envelope"></i></a>
+            </div>
+
+            <!-- Updated contact-info section -->
+            <div class="contact-info">
+                <div>
+                    <div class="ma"><a href="#"><i class="fas fa-phone-alt icon"></i></a></div>
+                    <h4>&nbsp;03342815316</h4>
+                </div>
+                <div>
+                    <div class="ma"><a href="#"><i class="far fa-envelope icon"></i></a></div>
+                    <h4>&nbsp;www.globalspeak@gmail.com</h4>
+                </div>
+                <center>
+                    <div class="footer-bottom">
+                        <p class="copy">Copyright &copy; 2024 All rights reserved | <br> <span class="designer">Ayesha
+                                and Yumna</span></p>
+                    </div>
+                </center>
+        </center>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

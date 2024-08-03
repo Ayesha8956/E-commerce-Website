@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Reset */
+        body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background : url(online.jpg); 
+    width: 100%;
+    height: 1000px;
+     background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #007bff; /* Navbar background color */
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            border-radius: 50%;
+        }
+
+        .navbar-toggler {
+            border-color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M0 5h30v2H0V5zm0 8h30v2H0v-2zm0 8h30v2H0v-2z" fill="%23fff"/></svg>');
+        }
+
+        .nav-link {
+            color: #fff !important;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        /* Button Styling */
+        .btn-dark {
+            background-color: #343a40;
+            border-color: #343a40;
+            border-radius: 5px;
+        }
+
+        .btn-dark:hover {
+            background-color: #23272b;
+            border-color: #1d2124;
+        }
+
+        /* Main Heading Styling */
+        .online {
+            color: #007bff;
+            padding: 20px 0;
+            font-weight: bold;
+            background-color: green;
+            width: 400px;
+            border: 5px solid black;
+            position: relative;
+            top: 20px;
+        }
+
+        /* Paragraph Styling */
+        .hey {
+            color: black;
+            padding: 10px;
+            font-size: 1.2em;
+            font-size: xx-large;
+            position: relative;
+            top: 25px;
+        }
+
+        .globe {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: green; /* Blue background color */
+            color: #fff; /* White text color */
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            top: 30px;
+        }
+
+        .footer .social-icons {
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            color: #fff; 
+            background-color: darkblue;
+            border-radius: 5px;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .footer .contact-info {
+            /* display: flex; */
+            justify-content: flex-start; /* Align contact info to the right */
+            margin-bottom: 15px;
+        }
+
+
+
+        .footer .contact-info div {
+            display: flex;
+            align-items: center;
+            margin-left: 20px; /* Space between contact items */
+            color: #fff; /* Ensure text color is white */
+        }
+
+        .footer .contact-info i {
+            font-size: 24px; /* Icon size */
+            margin-left: 10px; /* Space between icon and text */
+            color: #fff; /* Ensure icon color is white */
+        }
+
+        .footer .contact-info h3 {
+            margin: 0;
+            color: #fff; /* Ensure text color is white */
+        }
+
+       .footer-bottom {
+        background-color: black;
+        width: 400px;
+         height: 10px;
+        color: rgb(51, 145, 51) ;
+     padding-bottom: 100px;
+     padding-top:2px;
+     margin-bottom: 20px;
+     margin-top: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+     font-weight: bold;
+     }
+
+     .designer {
+      position: relative;
+      top: 10px;
+     }
+
+     .h2 {
+      color: black;
+     }
+     .icon {
+      color: #fff; /* Icon color */
+            background-color: darkblue; /* Background color */
+            border-radius: 5px; /* Make icons round */
+            width: 40px;
+            height: 30px;
+            text-align: center; /* Center the icon */
+            display: inline-block; /* Ensure padding affects the icon's space */
+            margin: 0 10px; /* Space between icons */
+            font-size: 20px; /* Icon size */
+            transition: background-color 0.3s, color 0.3s;
+     }
+     .phone {
+      position: relative;
+      bottom: 5px;
+     }
+     .h5 {
+      color: black;
+      font-weight: bold;
+     }
+     .rm{
+      color:green;
+      font-weight: bolder;
+      font-size: xx-large;
+      position: relative;
+      top: 25px;
+     }
+
+     .AYE {
+        color: white ; 
+        background-color: darkblue;
+        width: 100%;
+        padding-bottom:  15px; 
+        font-weight: bold;
+        font-size: larger;
+        /* padding-top: 10px; */
+        font-family: serif;
+        
+    }
+    .abd {
+       font-weight: bold;
+       display: inline;
+       font-size: x-large;
+    }
+
+        /* Responsive Styling */
+        @media (max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+            }
+
+            .navbar-nav .nav-item {
+                margin: 5px 0;
+            }
+
+            .footer-bottom {
+                text-align: center;
+            }
+        }
+
+        .con {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body class="body">
+  <div  class="AYE"> <center> Welcome to pakistan no 1 English Institute <h1 class="abd"> GLOBAL SPEAK </h1> </center></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="Pinyon Script (1).jpg" width="50px" height="50px" alt="Brand Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="english.lang.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="course.html.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="">Online Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="kids.html">Kids</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button type="button" class="btn btn-dark"><a href="form.html" class="con"><i class="fas fa-phone-alt icon"></i>&nbsp;CONTACT US</a></button>
+                </form>
+            </div>      
+        </div>
+    </nav>    
+    <center><h1 class="online">ONLINE CLASSES:</h1></center>
+    <div>
+    <h2 class="hey"><center><b> Hey, it's a "GOOD NEWS" for all the language lovers as we are conducting online classes for all the English language enthusiasts. So no more boundaries, we are available <span class="globe"><b>  GLOBALLY </b></span> now.</b>
+      </h2>
+      </div>
+      <div><h1 class="rm"> For more details,</h1> <h2 class="hey"> visit our website <a href="https://www.globalspeak.com" target="_blank">www.globalspeak.com</a>
+        <h1 class="rm">  Call us, </h1>
+         <div> <h2 class="hey">at 021-3452687018. </h2></div>
+
+      </div></center></h3>
+      
+    <div class="footer">
+        <center>
+            <div class="social-icons">
+                <h2 class="h2">Social Media</h2>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="mailto:info@globalspeak.com"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="contact-info">
+                <div class="phone">
+                  <i class="fas fa-phone-alt icon"></i>
+                    <h5 class="h5">&nbsp;03342815316</h5>
+                </div>
+                <div class="email">
+                  <i class="far fa-envelope icon"></i>
+                    <h5 class="h5">&nbsp;www.globalspeak@gmail.com</h5>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 All rights reserved | <br> <span class="designer">Ayesha and Yumna</span></p>
+            </div>
+        </center>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+</html>
